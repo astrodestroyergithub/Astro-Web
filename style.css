@@ -11,8 +11,8 @@ header {
     font-family: helvetica;
     padding-top: 20px;
     padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 #head-inline {
@@ -69,9 +69,9 @@ header {
     font-family: lucida sans;
     background-color: azure;
     position: absolute;
-    left: 21%;
-    right: 22%;
-    top:9%;
+    left: 21.7%;
+    right: 21.7%;
+    top:7%;
 }
 
 .signup .reg-head {
