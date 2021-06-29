@@ -45,7 +45,6 @@ header {
 }
 
 .about-channel {
-      font-size: 30px;
       font-family: 'Courier New', Courier, monospace;
       background-color: #d7ebd5;
       padding: 10px;
@@ -53,11 +52,14 @@ header {
 }
   
 .about-me {
-    font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
     background-color: #d7ebd5;
     padding: 10px;
     border: 2px solid black;
+}
+
+#abouts {
+    font-size: 30px;
 }
 
 .signup {
@@ -70,8 +72,8 @@ header {
     background-color: azure;
     opacity: 0.8;
     position: absolute;
-    left: 21.7%;
-    right: 21.7%;
+    left: 12%;
+    right: 12%;
     top:9%;
 }
 
@@ -94,8 +96,8 @@ header {
     background-color: azure;
     opacity: 0.8;
     position: absolute;
-    left: 35%;
-    right: 35%;
+    left: 30%;
+    right: 30%;
     top:9%;
 }
 
@@ -106,4 +108,8 @@ header {
     color: #fff;
     font-weight: bolder;
     padding: 5px;
+}
+
+label, input, b, select, textarea {
+    font-size:20px;
 }
