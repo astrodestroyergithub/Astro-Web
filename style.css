@@ -110,6 +110,27 @@ header {
     padding: 5px;
 }
 
-label, input, b, select, textarea {
+label, input, b, select, textarea,p {
     font-size:20px;
+}
+
+#help {
+    font-size: 45px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+.contact {
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border: 2px solid #32CD32;
+    font-family: courier new;
+    background-color: azure;
+    opacity: 0.8;
+    position: absolute;
+    left: 30%;
+    right: 30%;
+    top:9%;
 }

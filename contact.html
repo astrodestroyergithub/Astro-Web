@@ -5,6 +5,26 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <Title>Contact</Title>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+            function validate_contact() {
+                var name=document.getElementById("yourname").value;
+                if(name=='')
+                {
+                    alert("Please enter your name!");
+                    name.focus();
+                    return false;
+                }
+                var email=document.getElementById("youremail").value;
+                if(email=='')
+                {
+                    alert("Please enter your personal email!");
+                    email.focus();
+                    return false;
+                }
+                var subject=document.getElementById("subject").value;
+                var message=document.getElementById("message").value;
+            }
+        </script>
     </head>
     <body style="background-image: url('images/53464.jpg');background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;">
         <div class="topnav">
@@ -14,6 +34,17 @@
             <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
             <a href="about.html">About</a>
+        </div>
+        <div class="contact">
+            <table name="F2" id="F2" action="contact_link.php" method="post">
+                <tr><td colspan=2><div id="help">Contact Me for any Help</div></td></tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr><td><label for="yourname"><b>Your Name*</b></label></td><td><input type="text" name="yourname" id="yourname"></td></tr>
+                <tr><td><label for="youremail"><b>Your Email*</b></label></td><td><input type="email" name="youremail" id="youremail"></td></tr>
+                <tr><td><label for="subject"><b>Subject</b></label></td><td><input type="text" name="subject" id="subject"></td></tr>
+                <tr><td><label for="yourmessage"><b>Your Message</b></label></td><td><textarea name="yourmessage" id="yourmessage" style="width: 100%; height: 100%;" rows=5 columns=20></textarea></td></tr>
+                <tr><td colspan=2><input type="submit" value="Submit" onclick=validate_contact()></td></tr>
+            </table>
         </div>
     </body>
 </html>
