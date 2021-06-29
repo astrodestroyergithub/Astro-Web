@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Blog</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="slider.css">
+    </head>
+    <body>
+        <div class="topnav">
+            <a class="active" href="index.html">Home</a>
+            <a href="signup.html">Sign up</a>
+            <a href="login.html">Login</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About</a>
+        </div>
+        <header id="head">
+            <span style="font-size: 60px; font-color: blue; font-family:'Courier New', Courier, monospace; font-weight: bolder;">Blogs</span>
+            <h6 style="font-size: 30px; font-family:'Courier New';"><p class="auto-input"></p></h6>
+        </header>                
+        <div class="slidercontainer">  
+            <div class="showSlide fade">                                  
+                <iframe width="1000" height="400"
+                    src="https://www.youtube.com/embed/t7nj1hmiGWY">
+                </iframe> 
+                <div class="content">Channel promo</div>
+            </div>  
+            <div class="showSlide fade">  
+                <iframe width="1000" height="400"
+                    src="https://www.youtube.com/embed/vUH7tNJsHXA">
+                </iframe> 
+                <div class="content">Virtualization</div> 
+            </div>       
+            <div class="showSlide fade">  
+                <iframe width="1000" height="400"
+                    src="https://www.youtube.com/embed/Z6CDJSeu0ek">
+                </iframe> 
+                <div class="content">Symbian OS</div>  
+            </div>  
+            <div class="showSlide fade">  
+                <iframe width="1000" height="400"
+                    src="https://www.youtube.com/embed/ADuUBmVpVXE">
+                </iframe>  
+                <div class="content">Google SEO</div>  
+            </div>  
+            <!-- Navigation arrows -->  
+            <a class="left" onclick="nextSlide(-1)">❮</a>  
+            <a class="right" onclick="nextSlide(1)">❯</a>  
+        </div>  
+        <footer>
+            <p style="text-align:center; background-color: black; color:white; font-family: verdana; font-size: 15px; padding: 9px;">Copyright &copy; 2021 AstroDestroyer146.</p>
+        </footer>
+        <script src="typed.js"></script>
+        <script>
+            var typed = new Typed('.auto-input', {
+            strings: ["Welcome to the Blogs section of my webpage","Here you will get all the information about my works","You can also check the daily updates here"],
+            typeSpeed: 150,
+            backSpeed: 50,
+            loop: true
+            });
+        </script>
+        <script type="text/javascript">  
+            var slide_index = 1;  
+            displaySlides(slide_index);  
+      
+            function nextSlide(n) {  
+                displaySlides(slide_index += n);  
+            }  
+      
+            function currentSlide(n) {  
+                displaySlides(slide_index = n);  
+            }  
+      
+            function displaySlides(n) {  
+                var i;  
+                var slides = document.getElementsByClassName("showSlide");  
+                if (n > slides.length) { slide_index = 1 }  
+                if (n < 1) { slide_index = slides.length }  
+                for (i = 0; i < slides.length; i++) {  
+                    slides[i].style.display = "none";  
+                }  
+                slides[slide_index - 1].style.display = "block";  
+            }  
+        </script>  
+    </body>
+</html>
