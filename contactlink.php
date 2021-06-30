@@ -1,5 +1,4 @@
 <?php
-// contact linking mechanism
 $host="localhost";
 $user="postgres";
 $pass="12345";

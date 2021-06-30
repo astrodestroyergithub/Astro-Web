@@ -6,7 +6,7 @@ $db="astrodatabase";
 $con=pg_connect("host=$host dbname=$db user=$user password=$pass") or die ("Could not connect to server\n");
 echo "<html>
 <head>
-<title>Thanks for contacting...</title>
+<title>Thanks for registering...</title>
 </head>
 <body>";
 if($con) 

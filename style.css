@@ -44,6 +44,103 @@ header {
     color: white;
 }
 
+/* social media handles */
+
+.social {
+    background-color: #000;
+    position: absolute;
+    width: 100%;
+    bottom: -150px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* facebook */
+
+.facebook {
+    padding: 10px;
+    width: 40px;
+    text-decoration: none;
+}
+
+.facebook:hover {
+    opacity: 0.7;
+}
+
+.facebook {
+    color: white;
+}
+
+/* twitter */
+
+.twitter {
+    padding: 10px;
+    width: 40px;
+    text-decoration: none;
+}
+
+.twitter:hover {
+    opacity: 0.7;
+}
+
+.twitter {
+    color: white;
+}
+
+/* youtube */
+
+.youtube {
+    padding: 10px;
+    width: 40px;
+    text-decoration: none;
+}
+
+.youtube:hover {
+    opacity: 0.7;
+}
+
+.youtube {
+    color: white;
+}
+
+/* linkedin */
+
+.linkedin {
+    padding: 10px;
+    width: 40px;
+    text-decoration: none;
+}
+
+.linkedin:hover {
+    opacity: 0.7;
+}
+
+.linkedin {
+    color: white;
+}
+
+/* instagram */
+
+.instagram {
+    padding: 10px;
+    width: 40px;
+    text-decoration: none;
+}
+
+.instagram:hover {
+    opacity: 0.7;
+}
+
+.instagram {
+    color: white;
+}
+
+/* about page */
+
+#abouts {
+    font-size: 30px;
+}
+
 .about-channel {
       font-family: 'Courier New', Courier, monospace;
       background-color: #d7ebd5;
@@ -58,9 +155,7 @@ header {
     border: 2px solid black;
 }
 
-#abouts {
-    font-size: 30px;
-}
+/* signup page */
 
 .signup {
     padding-top: 0px;
@@ -86,6 +181,8 @@ header {
     padding: 5px;
 }
 
+/* login page */
+
 .login {
     padding-top: 20px;
     padding-left: 10px;
@@ -96,8 +193,8 @@ header {
     background-color: azure;
     opacity: 0.8;
     position: absolute;
-    left: 30%;
-    right: 30%;
+    left: 36%;
+    right: 36%;
     top:9%;
 }
 
@@ -110,15 +207,13 @@ header {
     padding: 5px;
 }
 
+/* for most of the pages */
+
 label, input, b, select, textarea,p {
     font-size:20px;
 }
 
-#help {
-    font-size: 45px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bolder;
-}
+/* for contact page */
 
 .contact {
     padding-top: 0px;
@@ -134,3 +229,29 @@ label, input, b, select, textarea,p {
     right: 30%;
     top:9%;
 }
+
+#help {
+    font-size: 45px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+/* for blog page */
+
+.blog-content {
+    margin: 2px solid black;
+}
+
+.blog-content .column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+  }
+  
+.blog-content .row {
+    margin: 2px solid black;
+    padding: 50px;
+    content: "";
+    clear: both;
+    display: table;
+  }
