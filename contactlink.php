@@ -1,23 +1,19 @@
 <?php
-$host="localhost";
-$user="postgres";
-$pass="12345";
-$db="astrodatabase";
+$con = mysqli_connect('localhost', 'root', '');
+mysqli_select_db($con, 'astrodestroyerdatabase');
 echo "<html>
 <head>
-<title>Thanks for contacting...</title>
+<title>Thanks for Contacting</title>
 </head>
 <body>";
-$con=pg_connect("host=$host dbname=$db user=$user password=$pass") or die ("Could not connect to server\n");
 if($con) 
 {
     $yourname=$_POST['yourname'];
     $youremail=$_POST['youremail'];
     $subject=$_POST['subject'];
     $yourmessage=$_POST['yourmessage'];
-    
     $query="insert into contactrequests (name,email,subject,message) values ('$yourname','$youremail','$subject','$yourmessage')";
-    $result=pg_query($con,$query);
+    mysqli_query($con, $query);
     echo "<p style='font-size: 20px; font-family: courier new; font-weight: bold;'>Your contact message has been delivered successfully...</p>";
 }
 else
@@ -25,5 +21,5 @@ else
     echo "<p style='font-size: 20px; font-family: courier new; font-weight: bold;'>Error : Unable to open database</p>";
 }
 echo "</body></html>";
-pg_close($con);
+mysqli_close($con);
 ?>

@@ -1,12 +1,9 @@
 <?php
-$host="localhost";
-$user="postgres";
-$pass="12345";
-$db="astrodatabase";
-$con=pg_connect("host=$host dbname=$db user=$user password=$pass") or die ("Could not connect to server\n");
+$con = mysqli_connect('localhost', 'root', '');
+mysqli_select_db($con, 'astrodestroyerdatabase');
 echo "<html>
 <head>
-<title>Thanks for registering...</title>
+<title>Thanks for Registering</title>
 </head>
 <body>";
 if($con) 
@@ -33,7 +30,7 @@ if($con)
     $address=$_POST['address'];
     $password=$_POST['password'];
     $query="insert into registeredusers (name,email,dob,sex,profession,qualification,nationality,address,password) values ('$name','$email','$dob','$sex','$profession','$qualification','$nationality','$address','$password')";
-    $result=pg_query($con,$query);
+    mysqli_query($con, $query);
     echo "<p style='font-size: 20px; font-family: courier new; font-weight: bold;'>Congratulations! You have signed up to the portal successfully...";
 }
 else
@@ -41,5 +38,5 @@ else
     echo "<p style='font-size: 20px; font-family: courier new; font-weight: bold;'>Error : Unable to open database\n";
 }
 echo "</p></body></html>";
-pg_close($con);
+mysqli_close($con);
 ?>
