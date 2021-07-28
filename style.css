@@ -246,7 +246,7 @@ label, input, b, select, textarea,p {
     float: left;
     width: 50%;
     padding: 5px;
-  }
+}
   
 .blog-content .row {
     margin: 2px solid black;
@@ -254,4 +254,4 @@ label, input, b, select, textarea,p {
     content: "";
     clear: both;
     display: table;
-  }
+}
