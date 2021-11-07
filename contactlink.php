@@ -12,7 +12,7 @@ if($con)
     $youremail=$_POST['youremail'];
     $subject=$_POST['subject'];
     $yourmessage=$_POST['yourmessage'];
-    $query="insert into contactrequests (name,email,subject,message) values ('$yourname','$youremail','$subject','$yourmessage')";
+    $query="insert into conreqs (name,email,subject,message) values ('$yourname','$youremail','$subject','$yourmessage')";
     mysqli_query($con, $query);
     echo "<p style='font-size: 20px; font-family: courier new; font-weight: bold;'>Your contact message has been delivered successfully...</p>";
 }

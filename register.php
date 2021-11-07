@@ -1,6 +1,6 @@
 <?php
 $con = mysqli_connect('localhost', 'root', '');
-mysqli_select_db($con, 'astrodestroyerdatabase');
+mysqli_select_db($con, 'astroweb');
 echo "<!DOCTYPE html>
 <html lang=\"en\">
     <head>
@@ -37,19 +37,19 @@ if($con)
     $nationality=$_POST['nationality'];
     $address=$_POST['address'];
     $password=$_POST['password'];
-    $query1="select * from registeredusers where email='$email'";
+    $query1="select * from regusers where email='$email'";
     $result1=mysqli_query($con,$query1);
     $num=mysqli_num_rows($result1);
     if($num==1)
     {
         echo "<p style='font-size: 20px; font-family: courier new; font-weight: bold;'>User having the same E-Mail Address already exists!</p><br>";
-        $query2="update registeredusers set name='$name',dob='$dob',sex='$sex',profession='$profession',qualification='$qualification',nationality='$nationality',address='$address',password='$password' where email='$email';";
+        $query2="update regusers set name='$name',dob='$dob',sex='$sex',profession='$profession',qualification='$qualification',nationality='$nationality',address='$address',password='$password' where email='$email';";
         mysqli_query($con,$query2);
         echo "<p style='font-size: 20px; font-family: courier new; font-weight: bold;'>The Registered User details have been updated.</p><br>";
     }
     else
     {
-        $query3="insert into registeredusers (name,email,dob,sex,profession,qualification,nationality,address,password) values ('$name','$email','$dob','$sex','$profession','$qualification','$nationality','$address','$password')";
+        $query3="insert into regusers (name,email,dob,sex,profession,qualification,nationality,address,password) values ('$name','$email','$dob','$sex','$profession','$qualification','$nationality','$address','$password')";
         mysqli_query($con, $query3);
         echo "<p style='font-size: 20px; font-family: courier new; font-weight: bold;'>Congratulations! You have signed up to the portal successfully.";
     }

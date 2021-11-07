@@ -1,7 +1,7 @@
 <?php
 session_start();
 $con = mysqli_connect('localhost', 'root', '');
-mysqli_select_db($con, 'astrodestroyerdatabase');
+mysqli_select_db($con, 'astroweb');
 echo "<!DOCTYPE html>
 <html lang=\"en\">
     <head>
@@ -20,7 +20,7 @@ if($con)
 {
     $email=$_POST['username'];
     $password=$_POST['password'];
-    $query1="select * from registeredusers where email='$email' and password='$password';";
+    $query1="select * from regusers where email='$email' and password='$password';";
     $result1=mysqli_query($con,$query1);
     $num=mysqli_num_rows($result1);
     if($num==1)
@@ -50,12 +50,12 @@ if($con)
         echo "<p style='font-size: 20px; font-family: courier new; font-weight: bold;'>Select the Module which you want to proceed with\n</p>";
         echo "<div class='mod'>
                 <span class='inner-mod'>
-                    <a href='update-contact-number.php'><button style='padding-left:25px;padding-right:25px;'><p style='font-size: 20px; font-family: helvetica; font-weight: bold;'>Update Contact Number</p></button></a><br><br>
-                    <a href='update-other-details.html'><button style='padding-left:40px;padding-right:40px;'><p style='font-size: 20px; font-family: helvetica; font-weight: bold;'>Update Other Details</p></button></a><br><br>
-                    <a href='tell-your-interests.html'><button style='padding-left:55px;padding-right:55px;'><p style='font-size: 20px; font-family: helvetica; font-weight: bold;'>Tell Your Interests</p></button></a><br><br>
-                    <a href='secret-information.html'><button style='padding-left:50px;padding-right:50px;'><p style='font-size: 20px; font-family: helvetica; font-weight: bold;'>Secret Information</p></button></a><br><br>
-                    <a href='identification-strings.php'><button style='padding-left:40px;padding-right:40px;'><p style='font-size: 20px; font-family: helvetica; font-weight: bold;'>Identification Strings</p></button></a><br><br>
-                    <a href='update_social_media_handles.php'><button style='padding-left:40px;padding-right:40px;'><p style='font-size: 20px; font-family: helvetica; font-weight: bold;'>Update Social Media Handles</p></button></a><br><br>
+                    <a href='conNum.php'><button style='padding-left:25px;padding-right:25px;'><p style='font-size: 20px; font-family: helvetica; font-weight: bold;'>Update Contact Number</p></button></a><br><br>
+                    <a href='othDetails.html'><button style='padding-left:40px;padding-right:40px;'><p style='font-size: 20px; font-family: helvetica; font-weight: bold;'>Update Other Details</p></button></a><br><br>
+                    <a href='tellInterests.html'><button style='padding-left:55px;padding-right:55px;'><p style='font-size: 20px; font-family: helvetica; font-weight: bold;'>Tell Your Interests</p></button></a><br><br>
+                    <a href='secInfo.html'><button style='padding-left:50px;padding-right:50px;'><p style='font-size: 20px; font-family: helvetica; font-weight: bold;'>Secret Information</p></button></a><br><br>
+                    <a href='idStrings.php'><button style='padding-left:40px;padding-right:40px;'><p style='font-size: 20px; font-family: helvetica; font-weight: bold;'>Identification Strings</p></button></a><br><br>
+                    <a href='medHandles.php'><button style='padding-left:40px;padding-right:40px;'><p style='font-size: 20px; font-family: helvetica; font-weight: bold;'>Update Social Media Handles</p></button></a><br><br>
                 </span>
             </div>";
     }

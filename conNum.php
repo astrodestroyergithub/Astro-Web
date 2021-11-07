@@ -23,7 +23,7 @@
             <a href="about.html">About</a>
         </div>
         <div class="login">
-            <form action="get-contact-numbers.php" method="post">
+            <form action="getConNum.php" method="post">
                 <table>
                     <tr>
                         <td colspan=12><div class="log-head"><center>Update Contact Number</center></div></td>

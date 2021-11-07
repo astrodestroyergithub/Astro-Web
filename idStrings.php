@@ -23,7 +23,7 @@
             <a href="about.html">About</a>
         </div>
         <div class="login">
-            <form action="get-identification-strings.php" method="post">
+            <form action="getIdString.php" method="post">
                 <table>
                     <tr>
                         <td colspan=20><div class="log-head"><center>Update Your Identification Strings</center></div></td>
